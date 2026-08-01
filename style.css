@@ -17,7 +17,7 @@ body {
   background-size: 18px 18px;
   color: var(--text);
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.45;
 }
 
@@ -70,7 +70,7 @@ nav {
 
 @media (max-width: 620px) {
   body {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   h1 {
