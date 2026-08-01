@@ -1,6 +1,7 @@
 # Gursimran Singh Panesar
 
-Minimal personal site for GitHub Pages.
+Minimal personal site for GitHub Pages. The site uses plain HTML and CSS with
+serif text, native-style links, and a light dotted-paper background.
 
 ## Local Preview
 
