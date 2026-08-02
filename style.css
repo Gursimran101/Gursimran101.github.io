@@ -40,6 +40,12 @@ h2 {
   letter-spacing: 0;
 }
 
+h3 {
+  margin: 28px 0 4px;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
 p,
 ul {
   margin-top: 0;
