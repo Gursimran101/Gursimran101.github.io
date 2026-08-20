@@ -75,6 +75,22 @@ h3 {
   margin-top: 20px;
 }
 
+.resume-intro h2 {
+  margin-bottom: 22px;
+}
+
+.resume-intro p {
+  margin-bottom: 0;
+}
+
+.research-page main > ul {
+  margin-bottom: 8px;
+}
+
+.project-link {
+  margin: 0;
+}
+
 .experience-heading {
   position: relative;
 }
