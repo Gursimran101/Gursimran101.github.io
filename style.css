@@ -72,11 +72,7 @@ h3 {
 }
 
 .resume-intro + .experience {
-  margin-top: 20px;
-}
-
-.resume-intro h2 {
-  margin-bottom: 22px;
+  margin-top: 40px;
 }
 
 .resume-intro p {
