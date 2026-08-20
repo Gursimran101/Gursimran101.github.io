@@ -53,14 +53,18 @@ def semantic_color(rgb, x, y):
     is_roof = 43 <= y <= 72 and g >= r * 1.04 and g >= b * 0.82 and luminance < 0.58
     is_brick = r > g * 1.16 and r > b * 1.2 and 58 <= y <= 105
 
+    is_side_facade = 62 <= y <= 106 and (x < 67 or x > 133)
+
     if is_roof:
-        return "#1f5d50" if luminance < 0.34 else "#397766"
+        return "#274f46" if luminance < 0.34 else "#3a6254"
     if is_green:
         return "#476d35" if luminance < 0.45 else "#76914d"
     if is_sky:
         return "#436f98" if luminance < 0.64 else "#7199bd"
+    if is_side_facade:
+        return "#655f57" if luminance < 0.5 else "#8c8478"
     if is_brick:
-        return "#874c38" if luminance < 0.5 else "#a66b4c"
+        return "#74645b" if luminance < 0.5 else "#96877a"
     if luminance < 0.2:
         return "#202626"
     if luminance < 0.34:
@@ -69,12 +73,12 @@ def semantic_color(rgb, x, y):
         return "#6e685c"
     if luminance < 0.66:
         return "#918778"
-    return "#b5aa99"
+    return "#a69b8c"
 
 
 def reinforce_architecture(chars, colors):
-    dark_green = "#0d493e"
-    roof_green = "#1f765d"
+    dark_green = "#214e44"
+    roof_green = "#315f50"
     deep_shadow = "#252927"
     arch_shadow = "#594d43"
     arch_mid = "#817567"
@@ -162,6 +166,8 @@ def make_ascii(source_path):
 
     indices = np.rint((1 - darkness) * (len(CHAR_RAMP) - 1)).astype(int)
     chars = np.array([[CHAR_RAMP[index] for index in row] for row in indices], dtype="<U1")
+    facade_rows = np.indices((ROWS, COLS))[0]
+    chars[(chars == " ") & (facade_rows >= 60) & (facade_rows <= 108)] = "."
     colors = np.empty((ROWS, COLS), dtype=object)
     for y in range(ROWS):
         for x in range(COLS):

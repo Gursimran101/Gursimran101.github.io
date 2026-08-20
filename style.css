@@ -89,7 +89,19 @@ h3 {
 }
 
 .research-page main > ul {
+  list-style: none;
   margin-bottom: 8px;
+  padding-left: 38px;
+}
+
+.research-page main > ul > li {
+  position: relative;
+}
+
+.research-page main > ul > li::before {
+  position: absolute;
+  left: -16px;
+  content: "\2022";
 }
 
 .research-page main > h2 {
@@ -98,7 +110,7 @@ h3 {
 
 .project-link {
   margin: 0;
-  padding-left: 8px;
+  padding-left: 22px;
 }
 
 .experience-heading {
