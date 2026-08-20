@@ -79,6 +79,11 @@ h3 {
   margin-bottom: 15.4px;
 }
 
+.resume-intro h2,
+.skills h2 {
+  font-size: 1.25rem;
+}
+
 .resume-intro p {
   margin-bottom: 0;
 }
@@ -93,7 +98,7 @@ h3 {
 
 .project-link {
   margin: 0;
-  padding-left: 38px;
+  padding-left: 8px;
 }
 
 .experience-heading {
