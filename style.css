@@ -116,6 +116,11 @@ h3 {
   margin-right: 22px;
 }
 
+.resume-intro,
+.skills {
+  margin-left: -68px;
+}
+
 p,
 ul {
   margin-top: 0;
@@ -145,6 +150,11 @@ nav {
 }
 
 @media (max-width: 959px) {
+  .resume-intro,
+  .skills {
+    margin-left: 0;
+  }
+
   .resume-page .experience-heading {
     padding-left: 68px;
   }
