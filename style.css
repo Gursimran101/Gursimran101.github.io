@@ -53,41 +53,30 @@ h3 {
   overflow: hidden;
 }
 
-.ascii-bridge pre {
-  margin: 0;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 7px;
-  line-height: 1.08;
-  letter-spacing: 0;
-  white-space: pre;
-}
-
-.bridge-sky {
-  color: #8a9194;
-}
-
-.bridge-main {
-  color: #c7472f;
-}
-
-.bridge-water {
-  color: #487c8f;
+.ascii-bridge img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .experience {
   margin-top: 30px;
 }
 
+.experience-heading {
+  position: relative;
+}
+
 .company {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   margin: 0 0 2px;
   font-size: 1.04rem;
   font-weight: 700;
 }
 
 .company-logo {
+  position: absolute;
+  top: 2px;
+  right: calc(100% + 10px);
   width: auto;
   max-width: 44px;
   height: 20px;
@@ -98,18 +87,36 @@ h3 {
   max-width: 58px;
 }
 
-.role {
-  margin-bottom: 0;
+.role-line {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.role,
+.date {
+  margin: 0;
 }
 
 .date {
-  margin-bottom: 12px;
   color: #555;
   font-size: 0.9rem;
 }
 
 .experience ul {
   margin-bottom: 0;
+}
+
+.resume-page main,
+.resume-page footer {
+  width: min(1120px, calc(100% - 160px));
+}
+
+.resume-page .experience li,
+.resume-page .skills-list li {
+  font-size: 0.84rem;
+  white-space: nowrap;
 }
 
 p,
@@ -138,6 +145,32 @@ footer {
 
 nav {
   font-size: 1.05rem;
+}
+
+@media (max-width: 1179px) {
+  .resume-page main,
+  .resume-page footer {
+    width: min(760px, calc(100% - 44px));
+  }
+
+  .resume-page .experience-heading {
+    padding-left: 68px;
+  }
+
+  .resume-page .company-logo {
+    right: auto;
+    left: 0;
+  }
+
+  .resume-page .role-line {
+    flex-wrap: wrap;
+  }
+
+  .resume-page .experience li,
+  .resume-page .skills-list li {
+    font-size: inherit;
+    white-space: normal;
+  }
 }
 
 @media (max-width: 620px) {
