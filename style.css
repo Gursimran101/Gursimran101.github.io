@@ -110,13 +110,10 @@ h3 {
 
 .resume-page main,
 .resume-page footer {
-  width: min(1120px, calc(100% - 160px));
-}
-
-.resume-page .experience li,
-.resume-page .skills-list li {
-  font-size: 0.84rem;
-  white-space: nowrap;
+  width: auto;
+  max-width: 970px;
+  margin-left: max(22px, calc((100% - 760px) / 2));
+  margin-right: 22px;
 }
 
 p,
@@ -147,12 +144,7 @@ nav {
   font-size: 1.05rem;
 }
 
-@media (max-width: 1179px) {
-  .resume-page main,
-  .resume-page footer {
-    width: min(760px, calc(100% - 44px));
-  }
-
+@media (max-width: 959px) {
   .resume-page .experience-heading {
     padding-left: 68px;
   }
@@ -164,12 +156,6 @@ nav {
 
   .resume-page .role-line {
     flex-wrap: wrap;
-  }
-
-  .resume-page .experience li,
-  .resume-page .skills-list li {
-    font-size: inherit;
-    white-space: normal;
   }
 }
 
