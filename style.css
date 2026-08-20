@@ -72,7 +72,11 @@ h3 {
 }
 
 .resume-intro + .experience {
-  margin-top: 40px;
+  margin-top: 46.6px;
+}
+
+.resume-intro h2 {
+  margin-bottom: 15.4px;
 }
 
 .resume-intro p {
@@ -83,8 +87,13 @@ h3 {
   margin-bottom: 8px;
 }
 
+.research-page main > h2 {
+  font-size: 1.04rem;
+}
+
 .project-link {
   margin: 0;
+  padding-left: 38px;
 }
 
 .experience-heading {
