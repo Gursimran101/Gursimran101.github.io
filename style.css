@@ -71,7 +71,7 @@ h3 {
 }
 
 .ascii-statement + h2 {
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
 .experience {
@@ -200,6 +200,10 @@ footer {
   margin-bottom: 44px;
   padding-top: 24px;
   border-top: 2px solid var(--rule);
+}
+
+.home-page footer {
+  margin-top: 44px;
 }
 
 nav {
