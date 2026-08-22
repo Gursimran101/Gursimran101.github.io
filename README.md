@@ -11,10 +11,13 @@ These standalone assets are retained but are not referenced or loaded by the sit
 assets/golden-gate-ascii.svg
 assets/cmu-ascii.svg
 assets/statement/golden-gate-ascii.svg
+assets/statement/golden-gate-converter-ascii.svg
 ```
 
-The home page uses the converter-derived statement asset at
-`assets/statement/golden-gate-converter-ascii.svg`.
+The home page uses the `ascii-image-converter` character grid at
+`assets/statement/golden-gate-aic.svg`. Its plain character output and source
+photograph are retained at `assets/statement/golden-gate-aic.txt` and
+`assets/source/bridge.jpg`; neither is loaded by the page.
 
 ## Local Preview
 
