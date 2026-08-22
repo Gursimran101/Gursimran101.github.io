@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.0 106" role="img" aria-labelledby="title desc">
   <title id="title">Golden Gate Bridge in optimized colored ASCII characters</title>
   <desc id="desc">A panoramic character rendering generated from supplied converter output.</desc>
-  <rect width="100%" height="100%" fill="#006fb7"/>
   <g font-family="Courier New, Courier, monospace" font-size="1" font-weight="700" letter-spacing="0" style="font-variant-ligatures:none">
     <text x="0.0" y="0.85" fill="#3a5c87">qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpmkmqkmkkggmqmqqqqpmkqmmpmpkkpmm</text>
     <text x="85.2" y="0.85" fill="#798cb7">kmymmdqqwhqgqdmqbmdmqmmggmbkdggqbkmmuuuuuuwukmwbuwwwmwwkymwvhwwwhhpwvwmhum</text>
