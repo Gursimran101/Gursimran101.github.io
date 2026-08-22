@@ -14,10 +14,13 @@ assets/statement/golden-gate-ascii.svg
 assets/statement/golden-gate-converter-ascii.svg
 ```
 
-The home page uses the `ascii-image-converter` character grid at
-`assets/statement/golden-gate-aic.svg`. Its plain character output and source
-photograph are retained at `assets/statement/golden-gate-aic.txt` and
-`assets/source/bridge.jpg`; neither is loaded by the page.
+The home page uses theme-specific `ascii-image-converter` character grids:
+`assets/statement/golden-gate-aic.svg` for dark mode and
+`assets/statement/golden-gate-aic-light.svg` for light mode. Their plain
+character output and source photograph are retained at
+`assets/statement/golden-gate-aic.txt`,
+`assets/statement/golden-gate-aic-light.txt`, and `assets/source/bridge.jpg`;
+these source files are not loaded by the page.
 
 ## Local Preview
 
