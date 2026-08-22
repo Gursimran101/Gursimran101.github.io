@@ -46,22 +46,14 @@ h3 {
   letter-spacing: 0;
 }
 
-.ascii-landmarks {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 18px;
-  margin: 30px 0 0;
-}
-
-.ascii-landmark {
-  width: min(2in, 100%);
-  max-height: 2in;
-  margin: 0;
+.ascii-statement {
+  width: min(900px, calc(100vw - 44px));
+  margin: 34px 50% 0;
   overflow: hidden;
+  transform: translateX(-50%);
 }
 
-.ascii-landmark img {
+.ascii-statement img {
   display: block;
   width: 100%;
   height: auto;
