@@ -10,10 +10,11 @@ These standalone assets are retained but are not referenced or loaded by the sit
 ```text
 assets/golden-gate-ascii.svg
 assets/cmu-ascii.svg
+assets/statement/golden-gate-ascii.svg
 ```
 
-The home page uses the separate wide-format statement asset at
-`assets/statement/golden-gate-ascii.svg`.
+The home page uses the converter-derived statement asset at
+`assets/statement/golden-gate-converter-ascii.svg`.
 
 ## Local Preview
 
