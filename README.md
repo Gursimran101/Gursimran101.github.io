@@ -5,7 +5,7 @@ serif text, native-style links, and a light dotted-paper background. Content
 sits against the left edge of the page rather than in a centred column; the
 experience page uses a wider column to make room for its logo gutter. On wide
 screens the home page places the artwork to the right of the text, centred
-about 60% of the way across the page.
+about 67% of the way across the page.
 
 ## Archived Artwork
 
