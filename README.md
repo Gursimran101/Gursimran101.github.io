@@ -1,7 +1,9 @@
 # Gursimran Singh Panesar
 
 Minimal personal site for GitHub Pages. The site uses plain HTML and CSS with
-serif text, native-style links, and a light dotted-paper background.
+serif text, native-style links, and a light dotted-paper background. Content
+sits against the left edge of the page rather than in a centred column; the
+experience page keeps its own wider layout.
 
 ## Archived Artwork
 
