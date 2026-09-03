@@ -14,14 +14,34 @@ assets/statement/golden-gate-ascii.svg
 assets/statement/golden-gate-converter-ascii.svg
 assets/statement/golden-gate-aic.svg
 assets/statement/golden-gate-aic-light.svg
+assets/statement/bridge-denim-grain.png
 ```
 
-The home page uses `assets/statement/bridge-denim-grain.png`, a dithered
-denim-blue rendering of the Golden Gate Bridge shown in both light and dark
-mode. The earlier theme-specific `ascii-image-converter` grids listed above,
-their plain character output at `assets/statement/golden-gate-aic.txt` and
+The home page uses the field-notes poster described below, shown in both
+light and dark mode. The dithered denim rendering and the earlier
+theme-specific `ascii-image-converter` grids listed above, their plain
+character output at `assets/statement/golden-gate-aic.txt` and
 `assets/statement/golden-gate-aic-light.txt`, and the source photograph
 `assets/source/bridge.jpg` are retained but not loaded by the page.
+
+## Field Notes Poster
+
+`assets/statement/golden-gate-field-notes.jpg` is a rubber-stamp travel
+field-notes poster: a misty photo of the bridge on the left and, on warm aged
+paper to the right, a small three-colour rubber stamp of the scene with a
+typewriter caption. `scripts/generate_field_notes.py` generates it from
+`assets/source/golden-gate-misty.jpg` (photo by Daryl Elliott via Unsplash,
+CC0, from Wikimedia Commons). Regenerate with:
+
+```text
+python3 scripts/generate_field_notes.py \
+  --source assets/source/golden-gate-misty.jpg \
+  --out assets/statement/golden-gate-field-notes.jpg --out-width 1800
+```
+
+The script needs Pillow, NumPy, and SciPy, and uses the macOS American
+Typewriter font. Drop `--out-width` and use a `.png` name for a full-size
+2400x1800 master.
 
 ## Local Preview
 
