@@ -56,11 +56,10 @@ Typewriter font. Drop `--out-width` and use a `.png` name for a full-size
 ## Contact Page Animation
 
 On the contact page a Porsche 911 GT3 RS drives off the email line and the
-address fades in through the dust it leaves behind. `contact.js` assembles the
-address at runtime so it never appears in the page source, builds the dust
-puffs, and starts the CSS animations in `style.css`; without JavaScript the
-page shows the plain "[at] [dot]" text, and visitors who prefer reduced motion
-get the address immediately. The car is Porsche's own studio side-profile
+address, written as "[at] [dot]" text, fades in through the dust it leaves
+behind. `contact.js` builds the dust puffs and starts the CSS animations in
+`style.css`; without JavaScript, or for visitors who prefer reduced motion,
+the address simply shows. The car is Porsche's own studio side-profile
 render of the car, taken from porsche.com and split into a body and two wheel
 discs (`assets/car/`) so the wheels spin as it drives; it is Porsche's
 copyrighted marketing image, used here on a personal site without a licence.
