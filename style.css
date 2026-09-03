@@ -395,8 +395,8 @@ html {
   position: absolute;
   left: var(--x);
   bottom: -4px;
-  width: calc(var(--car-width) * 0.18);
-  height: calc(var(--car-width) * 0.18);
+  width: calc(var(--car-width) * 0.24);
+  height: calc(var(--car-width) * 0.24);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(var(--dust), 0.55) 0%, rgba(var(--dust), 0.28) 40%, rgba(var(--dust), 0) 70%);
   opacity: 0;
