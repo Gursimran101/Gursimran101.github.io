@@ -15,12 +15,18 @@ assets/statement/golden-gate-converter-ascii.svg
 assets/statement/golden-gate-aic.svg
 assets/statement/golden-gate-aic-light.svg
 assets/statement/bridge-denim-grain.png
+assets/statement/golden-gate-field-notes.jpg
 ```
 
-The home page uses the field-notes poster described below, shown in both
-light and dark mode. The dithered denim rendering and the earlier
-theme-specific `ascii-image-converter` grids listed above, their plain
-character output at `assets/statement/golden-gate-aic.txt` and
+The home page shows two risograph-style halftone prints of the bridge:
+`assets/statement/golden-gate-riso-light.webp` (the north tower in daytime
+mist) in light mode and `assets/statement/golden-gate-riso-dark.webp` (the lit
+bridge at night) in dark mode. Both are stacked in the page and cross-fade when
+the colour scheme changes while the page is open; the fade is disabled for
+visitors who prefer reduced motion. The field-notes poster described below,
+the dithered denim rendering, and the earlier theme-specific
+`ascii-image-converter` grids listed above, their plain character output at
+`assets/statement/golden-gate-aic.txt` and
 `assets/statement/golden-gate-aic-light.txt`, and the source photograph
 `assets/source/bridge.jpg` are retained but not loaded by the page.
 
