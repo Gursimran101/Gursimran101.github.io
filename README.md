@@ -53,6 +53,20 @@ The script needs Pillow, NumPy, and SciPy, and uses the macOS American
 Typewriter font. Drop `--out-width` and use a `.png` name for a full-size
 2400x1800 master.
 
+## Contact Page Animation
+
+On the contact page a Porsche 911 GT3 RS drives off the email line and the
+address fades in through the dust it leaves behind. `contact.js` assembles the
+address at runtime so it never appears in the page source, builds the dust
+puffs, and starts the CSS animations in `style.css`; without JavaScript the
+page shows the plain "[at] [dot]" text, and visitors who prefer reduced motion
+get the address immediately. The car is Porsche's own studio side-profile
+render of the car, taken from porsche.com and split into a body and two wheel
+discs (`assets/car/`) so the wheels spin as it drives; it is Porsche's
+copyrighted marketing image, used here on a personal site without a licence.
+Append `#t=0.8` to the contact page URL to freeze the scene at 0.8 seconds
+when tuning it.
+
 ## Local Preview
 
 Open `index.html` in a browser.
