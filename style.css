@@ -213,10 +213,12 @@ footer {
   margin-top: 18px;
 }
 
-/* Home page on wide screens: text on the left, artwork on the right. */
+/* Home page on wide screens: text on the left, artwork on the right, with the
+   640px print centred three quarters of the way across the viewport (the
+   column's right edge sits at 75vw + 320px, less the 22px page margin). */
 .home-page main,
 .home-page footer {
-  max-width: 1180px;
+  max-width: calc(75vw + 298px);
 }
 
 .home-page main {
