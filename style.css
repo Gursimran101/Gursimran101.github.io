@@ -210,7 +210,35 @@ footer {
 }
 
 .home-page footer {
-  margin-top: 34px;
+  margin-top: 18px;
+}
+
+/* Home page on wide screens: text on the left, artwork on the right. */
+.home-page main,
+.home-page footer {
+  max-width: 1180px;
+}
+
+.home-page main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(640px, 55%);
+  grid-template-rows: auto auto auto auto 1fr;
+  column-gap: 48px;
+}
+
+.home-page main > * {
+  grid-column: 1;
+}
+
+.home-page main > .theme-art {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  width: 100%;
+  margin: 48px 0 0;
+}
+
+.home-page main > h2 {
+  margin-top: 215px;
 }
 
 nav {
@@ -273,6 +301,21 @@ nav {
 
   .resume-page .role-line {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 899px) {
+  .home-page main {
+    display: block;
+  }
+
+  .home-page main > .theme-art {
+    width: 100%;
+    margin: 34px 0 0;
+  }
+
+  .home-page main > h2 {
+    margin-top: 18px;
   }
 }
 
