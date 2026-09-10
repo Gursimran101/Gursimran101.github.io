@@ -22,9 +22,9 @@ body {
   background-image: radial-gradient(var(--dot) 0.8px, transparent 0.8px);
   background-size: 18px 18px;
   color: var(--text);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 18px;
-  line-height: 1.45;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 1.5;
 }
 
 a:link {
@@ -38,7 +38,7 @@ a:visited {
 main,
 footer {
   max-width: 760px;
-  margin: 0 22px;
+  margin: 0 24px;
 }
 
 main {
@@ -47,14 +47,15 @@ main {
 
 h1 {
   margin: 48px 0 36px;
-  font-size: 1.7rem;
-  line-height: 1.15;
+  font-size: 2em;
+  line-height: 1.5;
   letter-spacing: 0;
 }
 
 h2 {
   margin: 44px 0 22px;
-  font-size: 1.25rem;
+  font-size: 1.5em;
+  line-height: 1.5;
   letter-spacing: 0;
 }
 
@@ -78,7 +79,7 @@ h3 {
 
 .resume-intro h2,
 .skills h2 {
-  font-size: 1.25rem;
+  font-size: 1.5em;
 }
 
 .resume-intro p {
@@ -102,7 +103,7 @@ h3 {
 }
 
 .research-page main > h2 {
-  font-size: 1.04rem;
+  font-size: 1em;
 }
 
 .project-link {
@@ -116,7 +117,7 @@ h3 {
 
 .company {
   margin: 0 0 2px;
-  font-size: 1.04rem;
+  font-size: 1em;
   font-weight: 700;
 }
 
@@ -148,7 +149,7 @@ h3 {
 
 .date {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 .experience ul {
@@ -157,8 +158,8 @@ h3 {
 
 .resume-page main {
   max-width: 970px;
-  margin-left: 90px;
-  margin-right: 22px;
+  margin-left: 92px;
+  margin-right: 24px;
 }
 
 .resume-page footer {
@@ -244,12 +245,8 @@ footer {
   padding-bottom: 16px;
 }
 
-.home-page nav {
-  font-size: 1rem;
-}
-
 nav {
-  font-size: 1.05rem;
+  font-size: 1em;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -276,7 +273,7 @@ nav {
 
 @media (max-width: 959px) {
   .resume-page main {
-    margin-left: 22px;
+    margin-left: 24px;
   }
 
   .resume-intro,
@@ -299,8 +296,15 @@ nav {
 }
 
 @media (max-width: 620px) {
-  body {
-    font-size: 17px;
+  main,
+  footer {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .resume-page main {
+    margin-right: 16px;
+    margin-left: 16px;
   }
 
   h1 {
