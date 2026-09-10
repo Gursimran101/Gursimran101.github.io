@@ -57,10 +57,6 @@ h3 {
   letter-spacing: 0;
 }
 
-.home-page h2 {
-  margin: 32px 0 12px;
-}
-
 .experience {
   margin-top: 30px;
 }
@@ -191,8 +187,54 @@ footer {
   border-top: 2px solid var(--rule);
 }
 
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.home-page main,
 .home-page footer {
-  margin-top: 18px;
+  width: 100%;
+  max-width: 672px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.home-page main {
+  flex: 1;
+}
+
+.home-page h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+.home-page h2 {
+  margin: 0.83em 0;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+.home-page p {
+  max-width: none;
+  margin: 1em 0;
+}
+
+.home-page footer {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.home-page nav {
+  font-size: 1rem;
 }
 
 nav {
@@ -252,5 +294,9 @@ nav {
 
   h1 {
     margin-top: 34px;
+  }
+
+  .home-page {
+    padding: 16px;
   }
 }
