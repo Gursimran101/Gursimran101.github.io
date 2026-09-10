@@ -191,6 +191,10 @@ footer {
   border-top: 2px solid var(--rule);
 }
 
+.home-page footer {
+  margin-top: 18px;
+}
+
 nav {
   font-size: 1.05rem;
 }
