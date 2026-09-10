@@ -3,9 +3,9 @@
 Minimal personal site for GitHub Pages. The site uses plain HTML and CSS with
 serif text, native-style links, and a light dotted-paper background. Content
 sits against the left edge of the page rather than in a centred column; the
-experience page uses a wider column to make room for its logo gutter. On wide
-screens the home page places the artwork to the right of the text, centred
-about 67% of the way across the page.
+experience page uses a wider column to make room for its logo gutter. The home
+page is a compact directory containing contact details, a short biography, and
+links to the rest of the site.
 
 ## Archived Artwork
 
@@ -20,15 +20,12 @@ assets/statement/golden-gate-aic.svg
 assets/statement/golden-gate-aic-light.svg
 assets/statement/bridge-denim-grain.png
 assets/statement/golden-gate-field-notes.jpg
+assets/statement/golden-gate-riso-light.webp
+assets/statement/golden-gate-riso-dark.webp
 ```
 
-The home page shows two risograph-style halftone prints of the bridge:
-`assets/statement/golden-gate-riso-light.webp` (the north tower in daytime
-mist) in light mode and `assets/statement/golden-gate-riso-dark.webp` (the lit
-bridge at night) in dark mode. Both are stacked in the page and cross-fade when
-the colour scheme changes while the page is open; the fade is disabled for
-visitors who prefer reduced motion. The field-notes poster described below,
-the dithered denim rendering, and the earlier theme-specific
+The field-notes poster described below, the two risograph-style prints, the
+dithered denim rendering, and the earlier theme-specific
 `ascii-image-converter` grids listed above, their plain character output at
 `assets/statement/golden-gate-aic.txt` and
 `assets/statement/golden-gate-aic-light.txt`, and the source photograph
@@ -52,19 +49,6 @@ python3 scripts/generate_field_notes.py \
 The script needs Pillow, NumPy, and SciPy, and uses the macOS American
 Typewriter font. Drop `--out-width` and use a `.png` name for a full-size
 2400x1800 master.
-
-## Contact Page Animation
-
-On the contact page a Porsche 911 GT3 RS drives off the email line and the
-address, written as "[at] [dot]" text, fades in through the dust it leaves
-behind. `contact.js` builds the dust puffs and starts the CSS animations in
-`style.css`; without JavaScript, or for visitors who prefer reduced motion,
-the address simply shows. The car is Porsche's own studio side-profile
-render of the car, taken from porsche.com and split into a body and two wheel
-discs (`assets/car/`) so the wheels spin as it drives; it is Porsche's
-copyrighted marketing image, used here on a personal site without a licence.
-Append `#t=0.8` to the contact page URL to freeze the scene at 0.8 seconds
-when tuning it.
 
 ## Local Preview
 

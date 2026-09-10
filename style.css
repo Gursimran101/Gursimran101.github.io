@@ -57,26 +57,8 @@ h3 {
   letter-spacing: 0;
 }
 
-.theme-art {
-  display: grid;
-  width: min(320px, 100%);
-  margin: 34px 0 0;
-}
-
-.theme-art img {
-  grid-area: 1 / 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: opacity 1s ease;
-}
-
-.theme-art .theme-art-dark {
-  opacity: 0;
-}
-
-.theme-art + h2 {
-  margin-top: 18px;
+.home-page h2 {
+  margin: 32px 0 12px;
 }
 
 .experience {
@@ -209,216 +191,8 @@ footer {
   border-top: 2px solid var(--rule);
 }
 
-.home-page footer {
-  margin-top: 18px;
-}
-
-/* Home page on wide screens: text on the left, artwork on the right, with the
-   640px print centred 67% of the way across the viewport (the column's right
-   edge sits at 67vw + 320px, less the 22px page margin). */
-.home-page main,
-.home-page footer {
-  max-width: calc(67vw + 298px);
-}
-
-.home-page main {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) min(640px, 55%);
-  grid-template-rows: auto auto auto auto 1fr;
-  column-gap: 48px;
-}
-
-.home-page main > * {
-  grid-column: 1;
-}
-
-.home-page main > .theme-art {
-  grid-column: 2;
-  grid-row: 1 / -1;
-  width: 100%;
-  margin: 48px 0 0;
-}
-
-.home-page main > h2 {
-  margin-top: 215px;
-}
-
 nav {
   font-size: 1.05rem;
-}
-
-/* Contact page: a GT3 RS drives off the email line and leaves the address in
-   its dust. The car, about the height of the text, sits on the line at the
-   bullet, squats, launches to the right and exits the viewport; puffs of dust
-   hang where it stood and the address fades in through them. */
-html {
-  overflow-x: clip;
-}
-
-.email-item {
-  --dust: 118, 104, 82;
-  --car-width: 72px;
-  position: relative;
-}
-
-.email-item.is-armed .email-text {
-  opacity: 0;
-}
-
-.email-item.is-driving .email-text {
-  display: inline-block;
-  animation: email-in 0.9s ease-out 1.05s both;
-}
-
-@keyframes email-in {
-  from {
-    opacity: 0;
-    filter: blur(6px);
-    transform: translateX(-6px);
-  }
-
-  to {
-    opacity: 1;
-    filter: blur(0);
-    transform: none;
-  }
-}
-
-.car-stage {
-  position: absolute;
-  left: -26px;
-  bottom: -3px;
-  width: 100vw;
-  height: 1px;
-  display: none;
-  pointer-events: none;
-}
-
-.email-item.is-driving .car-stage {
-  display: block;
-}
-
-.email-item.is-done .car-stage {
-  display: none;
-}
-
-.car {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: var(--car-width);
-  animation: car-drive 1.6s cubic-bezier(0.6, 0, 1, 0.45) 0.3s both;
-}
-
-@keyframes car-drive {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(100vw + 80px));
-  }
-}
-
-.car-inner {
-  position: relative;
-  display: block;
-  transform-origin: 22% 90%;
-  animation: car-squat 0.5s ease-in-out 0.05s both;
-}
-
-@keyframes car-squat {
-  50% {
-    transform: rotate(-1.8deg) translateY(1px);
-  }
-}
-
-.car-body,
-.car-ghost {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.car-ghost {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  filter: blur(3px);
-  transform-origin: 100% 50%;
-  animation: car-ghost 1.2s ease-in 0.55s both;
-}
-
-@keyframes car-ghost {
-  to {
-    opacity: 0.7;
-    transform: scaleX(1.25);
-  }
-}
-
-.car-wheel {
-  position: absolute;
-  height: auto;
-  animation: wheel-spin 1.6s cubic-bezier(0.6, 0, 1, 0.45) 0.3s both;
-}
-
-.car-wheel-rear {
-  left: 22.26%;
-  top: 70.85%;
-  width: 15.61%;
-}
-
-.car-wheel-front {
-  left: 78.67%;
-  top: 72.57%;
-  width: 14.92%;
-}
-
-@keyframes wheel-spin {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-
-  to {
-    transform: translate(-50%, -50%) rotate(6200deg);
-  }
-}
-
-.dust {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.dust span {
-  position: absolute;
-  left: var(--x);
-  bottom: -4px;
-  width: calc(var(--car-width) * 0.24);
-  height: calc(var(--car-width) * 0.24);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(var(--dust), 0.55) 0%, rgba(var(--dust), 0.28) 40%, rgba(var(--dust), 0) 70%);
-  opacity: 0;
-  animation-name: puff;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-
-@keyframes puff {
-  0% {
-    opacity: 0;
-    transform: translate(0, 0) scale(0.3);
-  }
-
-  12% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate(var(--dx), var(--dy)) scale(var(--s));
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -441,23 +215,6 @@ html {
     filter: brightness(1.8);
   }
 
-  .theme-art .theme-art-light {
-    opacity: 0;
-  }
-
-  .theme-art .theme-art-dark {
-    opacity: 1;
-  }
-
-  .email-item {
-    --dust: 205, 196, 178;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .theme-art img {
-    transition: none;
-  }
 }
 
 @media (max-width: 959px) {
@@ -484,28 +241,9 @@ html {
   }
 }
 
-@media (max-width: 899px) {
-  .home-page main {
-    display: block;
-  }
-
-  .home-page main > .theme-art {
-    width: 100%;
-    margin: 34px 0 0;
-  }
-
-  .home-page main > h2 {
-    margin-top: 18px;
-  }
-}
-
 @media (max-width: 620px) {
   body {
     font-size: 17px;
-  }
-
-  .email-item {
-    --car-width: 64px;
   }
 
   h1 {
