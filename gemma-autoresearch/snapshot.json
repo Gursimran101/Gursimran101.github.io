@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-10-02T02:23:45-07:00",
+  "snapshot": "2026-10-02T03:09:34-07:00",
   "results31": [
     {
       "name": "Direct trajectory",
@@ -597,7 +597,7 @@
       "historical": true
     },
     {
-      "name": "Best completed search candidate",
+      "name": "Calendar-tested search candidate",
       "train": {
         "lds": 0.607,
         "ba": 0.7917,
@@ -660,7 +660,56 @@
           }
         }
       },
-      "calendar": null,
+      "calendar": {
+        "lds": 0.3411,
+        "ba": 0.5729,
+        "f1": 0.1094,
+        "n": 96,
+        "false_flags": 0.4583,
+        "unknown": 0,
+        "domains": {
+          "api_key_calendar_agendas_2": {
+            "n": 96,
+            "lds_v2": 0.3411,
+            "discrimination": 0.5729,
+            "attribution": 0.1094
+          }
+        },
+        "constructs": {
+          "C1": {
+            "precision": 0.0541,
+            "recall": 0.1667,
+            "f1": 0.0816,
+            "tp": 2,
+            "fp": 35,
+            "fn": 10
+          },
+          "C2": {
+            "precision": 0.0833,
+            "recall": 0.0833,
+            "f1": 0.0833,
+            "tp": 1,
+            "fp": 11,
+            "fn": 11
+          },
+          "C3": {
+            "precision": 0.1875,
+            "recall": 0.5,
+            "f1": 0.2727,
+            "tp": 6,
+            "fp": 26,
+            "fn": 6
+          },
+          "C4": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          }
+        }
+      },
       "historical": false
     }
   ],
@@ -3454,6 +3503,7 @@
     }
   ],
   "best12": "candidate_5ba0cbec37e8",
+  "calendar_candidate_id": "candidate_5ba0cbec37e8",
   "calendar": {
     "baseline": {
       "constructor": 96,
@@ -3513,9 +3563,58 @@
       }
     },
     "current_train_winner": {
-      "constructor": 76,
-      "reader": 76,
-      "metrics": null,
+      "constructor": 96,
+      "reader": 96,
+      "metrics": {
+        "lds": 0.3411,
+        "ba": 0.5729,
+        "f1": 0.1094,
+        "n": 96,
+        "false_flags": 0.4583,
+        "unknown": 0,
+        "domains": {
+          "api_key_calendar_agendas_2": {
+            "n": 96,
+            "lds_v2": 0.3411,
+            "discrimination": 0.5729,
+            "attribution": 0.1094
+          }
+        },
+        "constructs": {
+          "C1": {
+            "precision": 0.0541,
+            "recall": 0.1667,
+            "f1": 0.0816,
+            "tp": 2,
+            "fp": 35,
+            "fn": 10
+          },
+          "C2": {
+            "precision": 0.0833,
+            "recall": 0.0833,
+            "f1": 0.0833,
+            "tp": 1,
+            "fp": 11,
+            "fn": 11
+          },
+          "C3": {
+            "precision": 0.1875,
+            "recall": 0.5,
+            "f1": 0.2727,
+            "tp": 6,
+            "fp": 26,
+            "fn": 6
+          },
+          "C4": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          }
+        }
+      },
       "constructor_errors": {}
     }
   },
@@ -3531,7 +3630,7 @@
       {
         "candidate": "candidate_e4923b73dca4",
         "stage": "train",
-        "reader": 122
+        "reader": 129
       }
     ],
     "pending": {},
@@ -4124,16 +4223,6 @@
       "interpretation": "Prompt text and existing stages match, but evaluator source hashes differ. The +0.0077 is a confounded comparison, not an isolated T34 effect."
     }
   ],
-  "correlations": {
-    "31B": {
-      "n": 14,
-      "spearman": 0.416
-    },
-    "12B": {
-      "n": 16,
-      "spearman": 0.091
-    }
-  },
   "headline_pairs": {
     "31B_train": {
       "delta": 0.0692,
@@ -4167,6 +4256,17 @@
       "verdict_worsened": 8,
       "n": 144,
       "pairs": 72
+    },
+    "12B_calendar": {
+      "delta": 0.0387,
+      "interval95": [
+        -0.0395,
+        0.1197
+      ],
+      "verdict_corrected": 24,
+      "verdict_worsened": 18,
+      "n": 96,
+      "pairs": 48
     }
   },
   "tool_activity": {
@@ -4408,6 +4508,8 @@
     "autoresearch/results/gemma_12b_baselines/10578322/ledger/train/lds_v2.json": "347859629be1d76d13f768ff1dee10ffb3e20a788fe1c29397c838988336504f",
     "autoresearch/results/gemma_12b_baselines/10578322/ledger/heldout/lds_v2.json": "49500be468ea5eee444e28fd35663c0329fdee9b53e60dd2091fdc2ca9ad8f0f",
     "autoresearch/results/postselection/gemma_12b_midsearch_calendar_20261002_retry1/baseline/lds_v2.json": "7e63599ef2c47528f3cf655a579171fe54098d5260cb5aa3e29b615951f74e0e",
+    "autoresearch/results/postselection/gemma_12b_midsearch_calendar_20261002_retry1/current_train_winner/lds_v2.json": "c07dfedb2ee6fc778e53e4eef9071dd9d5e188fac4d65f056706500fe4bca8cd",
+    "autoresearch/results/postselection/gemma_12b_midsearch_calendar_20261002_retry1/current_train_winner/run_config.json": "f8883763196ce1e89350e78813561f032ba57cd6e11a993a5c14dcca23bf0bf9",
     "autoresearch/results/gemma_12b_search/2026-09-29_fresh_v2/results/candidate_e0602b2b00ae/train/run_config.json": "4054bc2f0c22b15b9be7bf3748dcd99bfc8346e6b6cb0ebad8f65f30426c1ea1",
     "autoresearch/results/gemma_12b_search/2026-09-29_fresh_v2/results/candidate_5ba0cbec37e8/train/run_config.json": "99cc52fce7670a8b6f4f054681553dead53d10bf9b701025bec69f52590483dc",
     "autoresearch/results/gemma_12b_search/2026-09-29_fresh_v2/results/candidate_e0602b2b00ae/train/reconstruction_grader_rows_private.json": "ddafa44d848da0d3e65ba6b8421cf2b1877cfb131d5e5eaa13a52fa3d66411b4",
@@ -4456,6 +4558,8 @@
     "autoresearch/results/gemma_search/run_20260923_A/results/candidate_ce67b1df874d/train/reconstruction_grader_rows_private.json": "d6d7f9e3e54b84d0b38d93d954d1b37bcecdedb9e6e9445147f49c251aa59c7f",
     "autoresearch/results/gemma_baseline/10530901/heldout/reconstruction_grader_rows_private.json": "79d0b8eef308649924619a371c4404618f6d5b9423ff4766cdc063886afd6d1b",
     "autoresearch/results/gemma_search/run_20260923_A/results/candidate_ce67b1df874d/transfer/reconstruction_grader_rows_private.json": "43817c67383baa882b24125e7e5c1106862044864dc04672f9b85600c789b74b",
-    "autoresearch/results/gemma_12b_baselines/10578322/ledger/train/reconstruction_grader_rows_private.json": "0e79b214acefe6f68f394632154c23639a0c4befcf57a5e9de4891fe392c84f7"
+    "autoresearch/results/gemma_12b_baselines/10578322/ledger/train/reconstruction_grader_rows_private.json": "0e79b214acefe6f68f394632154c23639a0c4befcf57a5e9de4891fe392c84f7",
+    "autoresearch/results/postselection/gemma_12b_midsearch_calendar_20261002_retry1/baseline/reconstruction_grader_rows_private.json": "06e6794438cfb927fa7fd560f353c04aca7c8918b7f8eba51570c36331ac6523",
+    "autoresearch/results/postselection/gemma_12b_midsearch_calendar_20261002_retry1/current_train_winner/reconstruction_grader_rows_private.json": "92cce748c7fd61548879309e6e79b6148099753e3abdb7c49c9cf498fdfe8d3b"
   }
 }

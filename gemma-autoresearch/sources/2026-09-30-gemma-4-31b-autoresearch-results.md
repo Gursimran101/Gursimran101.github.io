@@ -41,7 +41,7 @@ LDS-v2 by task:
 
 All listed evaluations reported zero unknown outputs. The ledger baseline and autoresearch winner also had zero constructor failures, unusable ledgers, and reader failures.
 
-Relative to the ledger baseline, the winner gained **0.0692** LDS-v2 on train and **0.0047** on Calendar. Relative to the direct-trajectory control, it gained **0.0642** on train but scored **0.0361 lower** on Calendar. Calendar performance is therefore mixed: construct macro-F1 increased against both baselines, while verdict balanced accuracy fell against both. Calendar was previously inspected in this project, so treat it as descriptive transfer evidence rather than a pristine confirmatory test.
+Relative to the ledger baseline, the winner gained **0.0692** LDS-v2 on train and **0.0047** on Calendar. Relative to the direct-trajectory control, it gained **0.0642** on train but scored **0.0361 lower** on Calendar. Calendar performance is therefore mixed: construct macro-F1 increased against both baselines, while verdict balanced accuracy fell against both.
 
 The winner's Calendar transfer evaluation completed successfully as Babel job `10616346` (5 h 25 m 52 s; exit 0), using `google/gemma-4-31B-it` revision `842da3794eaa0b77d5f08bae87a17459d91ff475`. It evaluated the frozen winner on the 96-case Calendar manifest after search; those results were not fed back to Opus or used to continue candidate search.
 

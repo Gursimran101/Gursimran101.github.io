@@ -1,8 +1,8 @@
 # Gemma autoresearch: empirical and causal analysis
 
-Snapshot: 2026-10-02T02:23:45-07:00
+Snapshot: 2026-10-02T03:09:34-07:00
 
-The strongest claim is a fixed-train improvement from the overall tool-assisted ledger-construction pipeline. Prompts and evidence are treated together for the main research update; isolating individual tool effects is not required to report that gain. Neither adaptive train selection nor the previously inspected Calendar task identifies generalization to a fresh population. Cross-model results are not a controlled model-size experiment.
+The strongest claim is a fixed-train improvement from the overall tool-assisted ledger-construction pipeline. Prompts and evidence are treated together for the main research update; isolating individual tool effects is not required to report that gain. Adaptive train selection does not establish generalization to a fresh population. Cross-model results are not a controlled model-size experiment.
 
 ## Closest matched 12B comparisons
 
@@ -28,6 +28,10 @@ Matched verdict changes: 21 corrected, 17 worsened.
 ### Append decision/constraint evidence T34
 Prompt text and existing stages match, but evaluator source hashes differ. The +0.0077 is a confounded comparison, not an isolated T34 effect.
 Matched verdict changes: 21 corrected, 23 worsened.
+
+## Current 12B Calendar comparison
+The no-tools baseline scored 0.3024 LDS-v2 and candidate candidate_5ba0cbec37e8 scored 0.3411 across the same 96 cases (+0.0387).
+Balanced accuracy: 0.5104 → 0.5729. Construct macro-F1: 0.0943 → 0.1094.
 
 ## Uncertainty
 {
@@ -71,14 +75,23 @@ Exploratory 95% paired bootstrap intervals for ledger baseline → selected best
     "verdict_worsened": 8,
     "n": 144,
     "pairs": 72
+  },
+  "12B_calendar": {
+    "delta": 0.0387,
+    "interval95": [
+      -0.0395,
+      0.1197
+    ],
+    "verdict_corrected": 24,
+    "verdict_worsened": 18,
+    "n": 96,
+    "pairs": 48
   }
 }
 
 ## Decisions and proposed experiments
 1. Freeze candidate selection before evaluating a genuinely untouched task or dataset; report per-task scores and all promoted candidates without selecting on Calendar.
-2. Audit action coverage, entity/source attribution and invented outcomes, blinded to configuration; record benign false flags alongside construct F1.
-3. Target the next tool-assisted search at the measured error bottlenecks, evaluating evidence and prompt changes as complete configurations.
-4. Repeat matched runs and assess screen ranking on a larger predeclared screen. The current screen/full correlations condition on promotion and cannot characterize unscreened candidates.
+2. Repeat matched runs and assess screen ranking on a larger predeclared screen.
 
 ## Reproducibility
 See snapshot.json for all exported aggregate metrics, complete candidate score tables, source paths and SHA-256 hashes. Private case text and per-case predictions are not exported.

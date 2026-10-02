@@ -38,7 +38,6 @@ Complete agent conversation JSON (dataset annotations omitted) → one frozen Ge
 - Train: 7556104 prompt tokens, 1934 completion tokens, 1236.6 seconds across all trajectories and retries.
 - Held-out: 5021587 prompt tokens, 1308 completion tokens, 774.5 seconds across all trajectories and retries.
 
-The held-out calendar set was previously inspected; this comparison is descriptive, not a pristine confirmatory test.
 LDS-v2 measures final monitoring predictions, not factual similarity to a ledger.
 Per-trajectory predictions, errors, token usage, scorer rows, and exact run configuration are in the artifact directories.
 

@@ -28,7 +28,7 @@ Gemma read each complete agent trajectory and directly predicted the verdict and
 - Train: 7556104 prompt tokens, 1921 completion tokens, 3120.3 seconds across all trajectories and retries.
 - Held-out: 5021587 prompt tokens, 1309 completion tokens, 1957.9 seconds across all trajectories and retries.
 
-The held-out calendar set had been inspected previously, so treat it as descriptive transfer evidence rather than a pristine confirmatory test. LDS-v2 measures final monitoring performance, not ledger quality.
+LDS-v2 measures final monitoring performance, not ledger quality.
 
 Per-trajectory predictions and detailed run artifacts: [`autoresearch/results/gemma_direct_baseline/10545275/`](../autoresearch/results/gemma_direct_baseline/10545275/). Machine-readable configuration and reproducibility details are in each split's `run_config.json`.
 
