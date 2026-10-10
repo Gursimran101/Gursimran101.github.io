@@ -1,6 +1,6 @@
 # Gemma autoresearch: empirical and causal analysis
 
-Snapshot: 2026-10-02T08:04:24-07:00
+Snapshot: 2026-10-09T19:22:56-07:00
 
 The searched tool-assisted ledger-construction pipeline attained higher train LDS than the no-tools reference. Prompts and evidence are treated together for the main research update; isolating individual tool effects is not required to report that result. The selected 12B configuration also scored higher than the no-tools ledger on the same 96 Calendar cases. Adaptive train selection does not establish generalization to a fresh population. Cross-model results are not a controlled model-size experiment.
 
@@ -32,6 +32,7 @@ Matched verdict changes: 21 corrected, 23 worsened.
 ## 12B Calendar comparison
 The no-tools ledger scored 0.3024 LDS-v2 and the search winner scored 0.3411 across the same 96 cases (+0.0387).
 Balanced accuracy: 0.5104 → 0.5729. Construct macro-F1: 0.0943 → 0.1094.
+All 37 full-train-promoted candidates were evaluated on Calendar. 34 scored above the ledger baseline; 23 scored above the train winner. The highest Calendar score was 0.4208 from a candidate with train LDS-v2 0.5180. That maximum was identified after evaluating all promoted candidates, so it is exploratory post-selection evidence, not the preselected train-winner result.
 
 ## Uncertainty
 {
@@ -66,13 +67,13 @@ Exploratory 95% paired bootstrap intervals for ledger baseline → selected best
     "pairs": 48
   },
   "12B_train": {
-    "delta": 0.2048,
+    "delta": 0.2065,
     "interval95": [
-      0.1398,
-      0.2706
+      0.1424,
+      0.2701
     ],
-    "verdict_corrected": 32,
-    "verdict_worsened": 8,
+    "verdict_corrected": 35,
+    "verdict_worsened": 10,
     "n": 144,
     "pairs": 72
   },
